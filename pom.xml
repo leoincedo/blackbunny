@@ -9,7 +9,7 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>BlackBunny Root</name>
-    <description>BlackBunnry Simple Server</description>
+    <description>BlackBunnry Server</description>
     <url>http://org.blackbunny.com/</url>
 
     <modules>
@@ -37,10 +37,9 @@
         <maven.rar.plugin.version>2.2</maven.rar.plugin.version>
         <maven.bundle.plugin.version>2.3.6</maven.bundle.plugin.version>
         <findbugs.maven.plugin.version>2.0.1</findbugs.maven.plugin.version>
-
         <junit.version>4.10</junit.version>
-        <mockito.all.version>1.8.2</mockito.all.version>
         <slf4j.api.version>1.6.0</slf4j.api.version>
+
     </properties>
 
     <scm>
@@ -77,9 +76,6 @@
                     <include>**/*.sh</include>
                     <include>**/*.properties</include>
                     <include>**/*.xml</include>
-                    <include>**/*.xsd</include>
-                    <include>**/*.handlers</include>
-                    <include>**/*.schemas</include>
                 </includes>
             </resource>
             <resource>
@@ -94,7 +90,6 @@
         </resources>
 
         <plugins>
-
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>findbugs-maven-plugin</artifactId>
@@ -107,58 +102,6 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>release</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>${maven.gpg.plugin.version}</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>${maven.javadoc.plugin.version}</version>
-                        <configuration>
-                            <javaApiLinks>
-                                <property>
-                                    <name>api_1.5</name>
-                                    <value>http://download.oracle.com/javase/1.5.0/docs/api/</value>
-                                </property>
-                                <property>
-                                    <name>api_1.6</name>
-                                    <value>http://download.oracle.com/javase/1.6.0/docs/api/</value>
-                                </property>
-                            </javaApiLinks>
-                            <excludePackageNames>com.hazelcast.impl.*:com.hazelcast.nio.*</excludePackageNames>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 
     <distributionManagement>
         <repository>
@@ -180,12 +123,5 @@
             <version>${junit.version}</version>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>${mockito.all.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
     </dependencies>
 </project>
