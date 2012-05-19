@@ -1,8 +1,7 @@
-## Blackbunny는? 게임/ 어플리케이션 서버 개발을 위한 초경량 프레임워크 입니다.
+## Blackbunny는? 게임/APP 서버 개발을 위한 초경량 프레임워크 입니다.
 
 * 안정적인 서버를 최대한 빠른시간안에 구현이 가능 하도록 기본 프레임워크를 제공 합니다.
-* 많은 경험을 보유한 개발자가 아니더라도 간단한 코드 만으로 서버를 개발 하는것이 가능합니다.
-
+* 많은 경험을 보유한 개발자가 아니더라도 간단한 코드 만으로 서버를 개발 하는 것이 가능 합니다.
 
 ## 특징
 * DB Mapper 제공
@@ -19,10 +18,11 @@
 + Apache Maven
 
 
+## 예제
 ```java
 package org.blackbunny.server;
 
-lass SampleServer implements NetHandler
+class SampleServer implements NetHandler
 {
     public static final Logger logger = LoggerFactory.getLogger( SampleServer.class );
 
