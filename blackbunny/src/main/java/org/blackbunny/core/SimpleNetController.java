@@ -24,7 +24,9 @@ public class SimpleNetController implements NetController {
 
     public static final Logger logger = LoggerFactory.getLogger(SimpleNetController.class);
 
-    final NetHandler netHandler;
+    ServerBootstrap bootstrap;
+    NetHandler netHandler;
+
 
     public SimpleNetController( NetHandler handler )
     {
@@ -42,6 +44,11 @@ public class SimpleNetController implements NetController {
 
     }
 
+    public void unbind()
+    {
+        bootstrap.releaseExternalResources();
+    }
+
     public boolean bind( InetSocketAddress inetSocketAddress ) {
 
 
@@ -49,7 +56,7 @@ public class SimpleNetController implements NetController {
                 Executors.newFixedThreadPool( Runtime.getRuntime().availableProcessors() + 1 ),
                 Executors.newFixedThreadPool( Runtime.getRuntime().availableProcessors() + 1 ) );
 
-        ServerBootstrap bootstrap = new ServerBootstrap( factory );
+        bootstrap = new ServerBootstrap( factory );
 
         class BlackBunnyChannelHandler extends SimpleChannelHandler
         {

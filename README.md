@@ -1,7 +1,6 @@
-## Blackbunny는? 게임/APP 서버 개발을 위한 초경량 프레임워크 입니다.
+## Blackbunny는? 
 
-* 안정적인 서버를 최대한 빠른시간안에 구현이 가능 하도록 기본 프레임워크를 제공 합니다.
-* 많은 경험을 보유한 개발자가 아니더라도 간단한 코드 만으로 서버를 개발 하는 것이 가능 합니다.
+* 게임 및 어플리케이션 서버 개발을 위한 경량 프레임워크 입니다.
 
 ## 특징
 * DB Mapper 제공
@@ -50,10 +49,12 @@ class SampleServer implements NetHandler
     {
         logger.info( "starting.." );
 
-        Injector.createComponent(JavaScript.class);
+        //!  Injector 통한 객체 생성, 생성단계에서 의존성 주입.
+        Injector.createComponent( JavaScript.class );
         Injector.createComponent( SampleDAO.class ).initDB();
 
         distributor = new NetMessageDistributor();
+        //! 해당 패키지의 모든 핸들러를 자동으록 찾아서 등록 및 의존성 주입.
         distributor.scanPackages( "org.blackbunny.server.handlers" );
 
         netController = new SimpleNetController( this );

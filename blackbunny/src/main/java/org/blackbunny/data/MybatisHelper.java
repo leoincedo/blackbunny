@@ -7,9 +7,8 @@ import org.reflections.Reflections;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
+import java.net.URL;
 import java.util.Set;
 
 /**
@@ -25,31 +24,47 @@ public class MybatisHelper {
 
     public MybatisHelper( String resource, String scanPackages )
     {
+        InputStream in = null;
+
         try {
+            in = new FileInputStream( resource );
+        } catch ( FileNotFoundException e ) {
+            logger.warn( "FileNotFound : file:{}", resource );
+        }
 
-            Reader reader = Resources.getUrlAsReader( "file:" + resource );
+        if( in == null ) {
+            URL url = MybatisHelper.class.getClassLoader().getResource( resource );
 
-            if (sqlSessionFactory == null) {
-                sqlSessionFactory = new SqlSessionFactoryBuilder().build( reader );
+            if( url == null ) {
+                logger.error( "FileNotFound : classpath:{}", resource );
+                return;
+            }
 
-                Reflections reflections = new Reflections( scanPackages );
+            logger.info("Loaded : classpth:{}", resource );
 
-                Set<Class<?>> annotated =
-                        reflections.getTypesAnnotatedWith( DBMapper.class );
-
-                for( Class cls : annotated ) {
-                    logger.info( "registered mapper : {}", cls.getName() );
-                    sqlSessionFactory.getConfiguration().addMapper( (Class<?>)cls );
-                }
+            try {
+                in = url.openStream();
+            } catch ( Exception e ) {
+                logger.error( "", e );
             }
         }
 
-        catch (FileNotFoundException fileNotFoundException) {
-            fileNotFoundException.printStackTrace();
+        if (sqlSessionFactory == null) {
+            sqlSessionFactory = new SqlSessionFactoryBuilder().build( in );
+
+            Reflections reflections = new Reflections( scanPackages );
+
+            Set<Class<?>> annotated =
+                    reflections.getTypesAnnotatedWith( DBMapper.class );
+
+            for( Class cls : annotated ) {
+                logger.info( "registered mapper : {}", cls.getName() );
+                sqlSessionFactory.getConfiguration().addMapper( (Class<?>)cls );
+            }
         }
-        catch (IOException iOException) {
-            iOException.printStackTrace();
-        }
+
+
+
     }
 
     public SqlSessionFactory getSqlSessionFactory() {

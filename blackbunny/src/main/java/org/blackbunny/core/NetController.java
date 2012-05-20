@@ -8,4 +8,5 @@ package org.blackbunny.core;
 public interface NetController {
     public boolean bind( int port );
     public boolean bind( String ip, int port );
+    public void unbind();
 }

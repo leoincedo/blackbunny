@@ -4,6 +4,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.blackbunny.data.DaoProxyFactory;
 import org.blackbunny.data.MybatisDaoProxyFactoryImpl;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -22,7 +23,7 @@ public class SampleDAO {
 
     public SampleDAO() {
 
-        factory = new MybatisDaoProxyFactoryImpl( "SqlMapConfig.xml", "org.blackbunny.server.data" );
+        factory = new MybatisDaoProxyFactoryImpl( "sqlMapConfig.xml", "org.blackbunny.server.data" );
         mapper = factory.createDaoProxy( SampleDBMapper.class );
 
     }
