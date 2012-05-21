@@ -23,6 +23,7 @@ public class SampleDAO {
 
     public SampleDAO() {
 
+        //! Load SqlMapConfig and Registration DBMapper
         factory = new MybatisDaoProxyFactoryImpl( "sqlMapConfig.xml", "org.blackbunny.server.data" );
         mapper = factory.createDaoProxy( SampleDBMapper.class );
 

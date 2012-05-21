@@ -1,7 +1,7 @@
 ## Blackbunny는? 
 
 * 게임 및 어플리케이션 서버 개발을 위한 경량 프레임워크 입니다.
-* Game and Application Server Develoment Lightweight Framework
+* Lightweight Server Framework for Game and Application
 
 ## 특징
 * 고성능 Network NIO ( Netty 사용 )
@@ -16,11 +16,11 @@
 
     mvn package
 
-# 서버 실행
+## 서버 실행
 
     java -cp blackbunny-server-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.server.SampleServer
 
-# 클라이언트 실행
+## 클라이언트 실행
 
     java -cp blackbunny-client-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.client.SampleClient localhost 27932 bot1
 
@@ -34,7 +34,7 @@
 * [SampleClientHandler.java](blackbunny/blob/master/blackbunny-client/src/main/java/org/blackbunny/client/SampleClientHandler.java)
 
 
-## 네트워크 패킷 데이터 구조
+## 패킷 데이터 구조
 
     +-------------+------------+----------------------+
     | 2byte       | 2byte      | variable             |
@@ -42,7 +42,7 @@
     | PACKET_SIZE | PACKET_ID  | DATA_SECTION         |
     +-------------+------------+----------------------+
 
-## 네트워크 패킷의 데이터 단위
+## 패킷의 데이터 단위
 
     BYTE    1byte
     INTEGER 4byte

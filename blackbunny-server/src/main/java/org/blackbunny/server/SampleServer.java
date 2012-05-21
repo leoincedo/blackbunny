@@ -40,10 +40,12 @@ public class SampleServer implements NetHandler
     {
         logger.info( "starting.." );
 
-        Injector.createComponent(JavaScript.class);
+        //! Dependency Injection
+        Injector.createComponent( JavaScript.class );
         Injector.createComponent( SampleDAO.class ).initDB();
 
         distributor = new NetMessageDistributor();
+        //! Registration handlers
         distributor.scanPackages( "org.blackbunny.server.handlers" );
 
         netController = new SimpleNetController( this );
