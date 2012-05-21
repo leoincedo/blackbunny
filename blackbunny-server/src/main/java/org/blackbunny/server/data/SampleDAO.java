@@ -43,17 +43,16 @@ public class SampleDAO {
 
             statement.execute( query );
 
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'leo', 'SeongWooKim' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'sar', 'SaRangKim' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot1', 'Bot1' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot2', 'Bot2' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot3', 'Bot3' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot4', 'Bot4' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot5', 'Bot5' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot6', 'Bot6' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot7', 'Bot7' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot8', 'Bot8' );" );
-            statement.execute( "insert into USER ( ID, NICKNAME ) values ( 'bot9', 'Bot9' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'leo', 'SeongWooKim' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot1', 'Bot1' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot2', 'Bot2' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot3', 'Bot3' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot4', 'Bot4' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot5', 'Bot5' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot6', 'Bot6' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot7', 'Bot7' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot8', 'Bot8' );" );
+            statement.execute( "INSERT INTO USER( ID, NICKNAME ) VALUES ( 'bot9', 'Bot9' );" );
 
 
         } finally {
@@ -71,5 +70,20 @@ public class SampleDAO {
     public List<User> getUserList() {
 
         return mapper.selectAll();
+    }
+
+    public void insertUser( User user )
+    {
+        mapper.insertUser( user );
+    }
+
+    public void deleteUser( String id )
+    {
+        mapper.deleteUser( id );
+    }
+
+    public void updateNick( String id, String nickname )
+    {
+        mapper.updateNick( id, nickname );
     }
 }

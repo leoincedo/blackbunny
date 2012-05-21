@@ -3,10 +3,16 @@ package org.blackbunny.server.handlers;
 import org.blackbunny.core.NetMessageHandlerBind;
 import org.blackbunny.core.NetMessage;
 import org.blackbunny.core.Session;
+import org.blackbunny.server.SampleServer;
 import org.blackbunny.server.data.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.InputStreamReader;
+import java.io.Reader;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,14 +35,16 @@ public class GetUser extends SampleHandler
 
         String id = message.readString();
 
-        User user = sampleDAO.getUser(id);
+        User user = sampleDAO.getUser( id );
 
         Map< String, Object > properties = new HashMap< String, Object >();
 
         properties.put("sampleDAO", sampleDAO );
 
         try {
-            String ret = (String)javaScript.functionCall( "./sample.js", properties, "test", new Object[] { user } );
+            Reader reader = new InputStreamReader( SampleServer.class.getClassLoader().getResourceAsStream("sample.js") );
+
+            String ret = (String)javaScript.functionCall( reader, properties, "test", new Object[] { user } );
 
             logger.info("script ret = " + ret );
 

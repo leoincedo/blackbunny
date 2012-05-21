@@ -40,7 +40,7 @@ public class MybatisDaoProxyFactoryImpl implements DaoProxyFactory {
             public Object intercept(Object object, Method method, Object[] args, MethodProxy methodProxy)
                     throws Throwable {
 
-                SqlSession session = sqlSessionFactory.openSession();
+                SqlSession session = sqlSessionFactory.openSession( true );
 
                 try {
                     T obj = session.getMapper( cls );

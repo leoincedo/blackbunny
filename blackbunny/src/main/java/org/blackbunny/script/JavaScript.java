@@ -5,6 +5,7 @@ import org.mozilla.javascript.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.Reader;
 import java.util.Map;
 
 /**
@@ -14,12 +15,8 @@ import java.util.Map;
  */
 public class JavaScript {
 
-    public Object functionCall( String filename, Map< String, Object > properties, String function,  Object[] arguments ) throws IOException
+    public Object functionCall( Reader reader, Map< String, Object > properties, String function,  Object[] arguments ) throws IOException
     {
-
-        if( !new File( filename ).exists() ) {
-            throw new FileNotFoundException( "not exists script file :" + filename );
-        }
 
         Context cx = Context.enter();
 
@@ -31,7 +28,7 @@ public class JavaScript {
 
         try {
             Scriptable scope = new ImporterTopLevel(cx);
-            Script script = cx.compileReader( new java.io.FileReader( filename ), "", 1, null);
+            Script script = cx.compileReader( reader, "", 1, null);
 
 
             for( Map.Entry< String, Object > entry : properties.entrySet() ) {
