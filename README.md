@@ -1,75 +1,35 @@
 ## Blackbunny는? 
 
 * 게임 및 어플리케이션 서버 개발을 위한 경량 프레임워크 입니다.
+* Game and Application Server Develoment Lightweight Framework
 
 ## 특징
-* DB Mapper 제공
+* 고성능 Network NIO ( Netty 사용 )
+* 간편한 DB Mapper 제공 ( Mybatis 사용 )
 * 의존성 주입 ( Dependency Injection )
-* 자바스크립트 지원
-* 대용량 서비스
-
-## TODO
-* 분산 처리 지원
-* 모니터링 지원
+* 동적 자바 스크립트 코드 연동
 
 ## 필요사항
-+ Java 1.5이상
-+ Apache Maven
++ Java 1.5이상, Apache Maven 3.x
+
+## 빌드
+`mvn package`
+
+# 서버 실행
+`java -cp blackbunny-server-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.server.SampleServer`
+
+# 클라이언트 실행
+`java -cp blackbunny-client-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.client.SampleClient localhost 27932 bot1`
 
 
-## 예제
-```java
-package org.blackbunny.server;
+## 샘플 코드
+* [SampleServer.java](blackbunny-server/src/main/java/org/blackbunny/server/SampleServer.java)
+* [SampleDBMapper.java](blackbunny-server/src/main/java/org/blackbunny/server/data/SampleDBMapper.java)
+* [SampleDAO.java](blackbunny-server/src/main/java/org/blackbunny/server/data/SampleDAO.java)
+* [GetUser.java](blackbunny-server/src/main/java/org/blackbunny/server/handlers/GetUser.java)
+* [GetUserList.java](blackbunny-server/src/main/java/org/blackbunny/server/handlers/GetUserList.java)
+* [sample.js](blackbunny-server/src/main/resources/sample.js)
+* [SampleClientHandler.java](blackbunny-client/src/main/java/org/blackbunny/client/SampleClientHandler.java)
 
-class SampleServer implements NetHandler
-{
-    public static final Logger logger = LoggerFactory.getLogger( SampleServer.class );
 
-    NetMessageDistributor distributor;
-    NetController netController;
 
-    public void onConnected(Session session) {
-        logger.info( "onConnected : {}", session );
-    }
-
-    public void onClosed(Session session) {
-        logger.info( "onClosed : {}", session );
-    }
-
-    public void messageReceived(NetMessage message) {
-        logger.info( "onMessage : {}", message.getSession() );
-        distributor.execute( message );
-    }
-
-    public void exceptionCaught(Session session, Throwable cause) {
-        logger.info( "exceptionCaught : {}", session, cause );
-    }
-
-    public void start() throws Exception
-    {
-        logger.info( "starting.." );
-
-        //!  Injector 통한 객체 생성, 생성단계에서 의존성 주입.
-        Injector.createComponent( JavaScript.class );
-        Injector.createComponent( SampleDAO.class ).initDB();
-
-        distributor = new NetMessageDistributor();
-        //! 해당 패키지의 모든 핸들러를 자동으록 찾아서 등록 및 의존성 주입.
-        distributor.scanPackages( "org.blackbunny.server.handlers" );
-
-        netController = new SimpleNetController( this );
-        netController.bind( 27932 );
-
-        Thread.sleep( Integer.MAX_VALUE );
-
-    }
-
-    public static void main( String[] args ) throws Exception {
-
-        SampleServer server = new SampleServer();
-        server.start();
-
-    }
-
-}
-```
