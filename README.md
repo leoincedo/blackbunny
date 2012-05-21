@@ -13,13 +13,16 @@
 + Java 1.5이상, Apache Maven 3.x
 
 ## 빌드
-`mvn package`
+
+    mvn package
 
 # 서버 실행
-`java -cp blackbunny-server-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.server.SampleServer`
+
+    java -cp blackbunny-server-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.server.SampleServer
 
 # 클라이언트 실행
-`java -cp blackbunny-client-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.client.SampleClient localhost 27932 bot1`
+
+    java -cp blackbunny-client-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.client.SampleClient localhost 27932 bot1
 
 
 ## 샘플 코드
