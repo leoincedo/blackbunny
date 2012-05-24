@@ -5,6 +5,9 @@ package org.blackbunny.cluster;
  * User: leoincedo
  * Date: 5/11/12
  */
-public interface ClusterService {
+public interface ClusterService
+{
+    public void start();
+    public void stop();
 
 }
