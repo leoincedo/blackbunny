@@ -10,19 +10,11 @@
 * 자바 스크립트 코드 연동
 
 ## 필요사항
-+ Java 1.5이상, Apache Maven 3.x
+* Java 1.5이상, Apache Maven 3.x
 
-## 빌드
+## 메뉴얼
 
-    mvn package
-
-## 서버 실행
-
-    java -cp blackbunny-server-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.server.SampleServer
-
-## 클라이언트 실행
-
-    java -cp blackbunny-client-0.1-SNAPSHOT-jar-with-dependencies.jar org.blackbunny.client.SampleClient localhost 27932 bot1
+* [빌드 및 실행 방법](wiki/빌드-및-실행-방법)
 
 ## 샘플 코드
 * [SampleServer.java](blackbunny/blob/master/blackbunny-server/src/main/java/org/blackbunny/server/SampleServer.java)
