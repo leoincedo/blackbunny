@@ -14,7 +14,7 @@
 
 ## 메뉴얼
 
-* [빌드 및 실행 방법](wiki/빌드-및-실행-방법)
+* [빌드 및 실행 방법](blackbunny/wiki/빌드-및-실행-방법)
 
 ## 샘플 코드
 * [SampleServer.java](blackbunny/blob/master/blackbunny-server/src/main/java/org/blackbunny/server/SampleServer.java)
