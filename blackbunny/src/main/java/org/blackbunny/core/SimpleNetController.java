@@ -13,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.InetSocketAddress;
+import java.nio.ByteOrder;
 import java.util.concurrent.Executors;
 
 /**
@@ -103,7 +104,8 @@ public class SimpleNetController implements NetController {
             }
         });
 
-        bootstrap.setOption( "child.bufferFactory", new HeapChannelBufferFactory() );
+
+        bootstrap.setOption( "child.bufferFactory", new HeapChannelBufferFactory( NetByteOrder.order()) );
         bootstrap.setOption( "child.tcpNoDelay", true );
         bootstrap.setOption( "child.keepAlive", true );
 

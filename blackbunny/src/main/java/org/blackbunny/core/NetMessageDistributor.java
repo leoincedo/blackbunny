@@ -64,6 +64,10 @@ public class NetMessageDistributor
     public void execute( NetMessage message )
     {
         NetMessageHandler handler = get( message.getId() );
+        if( handler == null ) {
+            logger.warn("Not Registered Handler : {}", message.getId() );
+            return;
+        }
         handler.execute( message );
     }
 }

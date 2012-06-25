@@ -8,11 +8,8 @@ import org.blackbunny.server.data.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.FileInputStream;
-import java.io.FileReader;
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +30,7 @@ public class GetUser extends SampleHandler
 
         logger.info("GetUser : execute");
 
-        String id = message.readString();
+        String id = message.getString();
 
         User user = sampleDAO.getUser( id );
 

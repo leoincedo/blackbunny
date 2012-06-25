@@ -45,15 +45,15 @@ public class SampleClientHandler extends SimpleChannelHandler
         System.out.println("recevied msg.");
 
         if( msg.getId() == 101 ) {
-            System.out.println("ID : " + msg.readString() +", NICK : " + msg.readString() );
+            System.out.println("ID : " + msg.getString() +", NICK : " + msg.getString() );
         }
 
         if( msg.getId() == 201 ) {
 
-            int size = msg.readInt();
+            int size = msg.getInt();
             System.out.println("USER LIST : " + size );
             for( int i = 0; i < size; ++i ) {
-                System.out.println("ID : " + msg.readString() +", NICK : " + msg.readString() );
+                System.out.println("ID : " + msg.getString() +", NICK : " + msg.getString() );
             }
         }
 

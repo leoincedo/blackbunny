@@ -16,7 +16,7 @@ public class NetMessage
 
     public NetMessage()
     {
-        buffer = ChannelBuffers.buffer( 1024 );
+        buffer = ChannelBuffers.buffer( NetByteOrder.order(), 1024 );
     }
 
     public Session getSession() {
@@ -59,12 +59,12 @@ public class NetMessage
         buffer.writeBytes(bytes);
     }
 
-    public byte readByte() { return buffer.readByte(); }
-    public int readInt() { return buffer.readInt(); }
-    public Long readLong() { return buffer.readLong(); }
-    public Float readFloat() { return buffer.readFloat(); }
-    public Double readDouble() { return buffer.readDouble(); }
-    public String readString() {
+    public byte getByte() { return buffer.readByte(); }
+    public int getInt() { return buffer.readInt(); }
+    public Long getLong() { return buffer.readLong(); }
+    public Float getFloat() { return buffer.readFloat(); }
+    public Double getDouble() { return buffer.readDouble(); }
+    public String getString() {
         short size = buffer.readShort();
         byte[] bytes = new byte[ size ];
         buffer.readBytes(bytes);

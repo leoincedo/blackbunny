@@ -7,6 +7,8 @@ import org.blackbunny.server.data.SampleDAO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.nio.ByteOrder;
+
 /**
  * Created by IntelliJ IDEA.
  * User: leoincedo
@@ -39,6 +41,9 @@ public class SampleServer implements NetHandler
     public void start() throws Exception
     {
         logger.info( "starting.." );
+
+        //! Setting... ByteOrder
+        NetByteOrder.order( ByteOrder.LITTLE_ENDIAN );
 
         //! Dependency Injection
         Injector.createComponent( JavaScript.class );
