@@ -9,5 +9,15 @@ import java.nio.ByteOrder;
  * Time: 6:17 PM
  */
 public class NetByteOrder {
-    ByteOrder order
+    static ByteOrder _order = ByteOrder.LITTLE_ENDIAN;
+
+    public static void order( ByteOrder order )
+    {
+        _order = order;
+    }
+
+    public static ByteOrder order()
+    {
+        return _order;
+    }
 }
