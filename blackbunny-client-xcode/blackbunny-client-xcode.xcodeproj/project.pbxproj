@@ -1,0 +1,500 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		74A512ED1598077400193AD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512EC1598077400193AD2 /* UIKit.framework */; };
+		74A512EF1598077400193AD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512EE1598077400193AD2 /* Foundation.framework */; };
+		74A512F11598077400193AD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512F01598077400193AD2 /* CoreGraphics.framework */; };
+		74A512F31598077400193AD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512F21598077400193AD2 /* CoreData.framework */; };
+		74A512F91598077400193AD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74A512F71598077400193AD2 /* InfoPlist.strings */; };
+		74A512FB1598077400193AD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A512FA1598077400193AD2 /* main.m */; };
+		74A512FF1598077400193AD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A512FE1598077400193AD2 /* AppDelegate.m */; };
+		74A513021598077400193AD2 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A513001598077400193AD2 /* MainStoryboard_iPhone.storyboard */; };
+		74A513051598077400193AD2 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74A513031598077400193AD2 /* MainStoryboard_iPad.storyboard */; };
+		74A513081598077400193AD2 /* blackbunny_client_xcode.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 74A513061598077400193AD2 /* blackbunny_client_xcode.xcdatamodeld */; };
+		74A5130B1598077400193AD2 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A5130A1598077400193AD2 /* MasterViewController.m */; };
+		74A5130E1598077400193AD2 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A5130D1598077400193AD2 /* DetailViewController.m */; };
+		74A513161598077400193AD2 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A513151598077400193AD2 /* SenTestingKit.framework */; };
+		74A513171598077400193AD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512EC1598077400193AD2 /* UIKit.framework */; };
+		74A513181598077400193AD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512EE1598077400193AD2 /* Foundation.framework */; };
+		74A513191598077400193AD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74A512F21598077400193AD2 /* CoreData.framework */; };
+		74A513211598077400193AD2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 74A5131F1598077400193AD2 /* InfoPlist.strings */; };
+		74A513241598077400193AD2 /* blackbunny_client_xcodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A513231598077400193AD2 /* blackbunny_client_xcodeTests.m */; };
+		74A5133315980D9A00193AD2 /* Packet.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A5133215980D9A00193AD2 /* Packet.m */; };
+		74A5133615980DC100193AD2 /* NetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A5133515980DC100193AD2 /* NetController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		74A5131A1598077400193AD2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 74A512DF1598077400193AD2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 74A512E71598077400193AD2;
+			remoteInfo = "blackbunny-client-xcode";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		74A512E81598077400193AD2 /* blackbunny-client-xcode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "blackbunny-client-xcode.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A512EC1598077400193AD2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		74A512EE1598077400193AD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		74A512F01598077400193AD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		74A512F21598077400193AD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		74A512F61598077400193AD2 /* blackbunny-client-xcode-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blackbunny-client-xcode-Info.plist"; sourceTree = "<group>"; };
+		74A512F81598077400193AD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74A512FA1598077400193AD2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		74A512FC1598077400193AD2 /* blackbunny-client-xcode-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "blackbunny-client-xcode-Prefix.pch"; sourceTree = "<group>"; };
+		74A512FD1598077400193AD2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		74A512FE1598077400193AD2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		74A513011598077400193AD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		74A513041598077400193AD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		74A513071598077400193AD2 /* blackbunny_client_xcode.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = blackbunny_client_xcode.xcdatamodel; sourceTree = "<group>"; };
+		74A513091598077400193AD2 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		74A5130A1598077400193AD2 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		74A5130C1598077400193AD2 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		74A5130D1598077400193AD2 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		74A513141598077400193AD2 /* blackbunny-client-xcodeTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "blackbunny-client-xcodeTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74A513151598077400193AD2 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		74A5131E1598077400193AD2 /* blackbunny-client-xcodeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "blackbunny-client-xcodeTests-Info.plist"; sourceTree = "<group>"; };
+		74A513201598077400193AD2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		74A513221598077400193AD2 /* blackbunny_client_xcodeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = blackbunny_client_xcodeTests.h; sourceTree = "<group>"; };
+		74A513231598077400193AD2 /* blackbunny_client_xcodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = blackbunny_client_xcodeTests.m; sourceTree = "<group>"; };
+		74A5133115980D9A00193AD2 /* Packet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Packet.h; sourceTree = "<group>"; };
+		74A5133215980D9A00193AD2 /* Packet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Packet.m; sourceTree = "<group>"; };
+		74A5133415980DC100193AD2 /* NetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetController.h; sourceTree = "<group>"; };
+		74A5133515980DC100193AD2 /* NetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		74A512E51598077400193AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A512ED1598077400193AD2 /* UIKit.framework in Frameworks */,
+				74A512EF1598077400193AD2 /* Foundation.framework in Frameworks */,
+				74A512F11598077400193AD2 /* CoreGraphics.framework in Frameworks */,
+				74A512F31598077400193AD2 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A513101598077400193AD2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A513161598077400193AD2 /* SenTestingKit.framework in Frameworks */,
+				74A513171598077400193AD2 /* UIKit.framework in Frameworks */,
+				74A513181598077400193AD2 /* Foundation.framework in Frameworks */,
+				74A513191598077400193AD2 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		74A512DD1598077400193AD2 = {
+			isa = PBXGroup;
+			children = (
+				74A512F41598077400193AD2 /* blackbunny-client-xcode */,
+				74A5131C1598077400193AD2 /* blackbunny-client-xcodeTests */,
+				74A512EB1598077400193AD2 /* Frameworks */,
+				74A512E91598077400193AD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		74A512E91598077400193AD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74A512E81598077400193AD2 /* blackbunny-client-xcode.app */,
+				74A513141598077400193AD2 /* blackbunny-client-xcodeTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		74A512EB1598077400193AD2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74A512EC1598077400193AD2 /* UIKit.framework */,
+				74A512EE1598077400193AD2 /* Foundation.framework */,
+				74A512F01598077400193AD2 /* CoreGraphics.framework */,
+				74A512F21598077400193AD2 /* CoreData.framework */,
+				74A513151598077400193AD2 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		74A512F41598077400193AD2 /* blackbunny-client-xcode */ = {
+			isa = PBXGroup;
+			children = (
+				74A512FD1598077400193AD2 /* AppDelegate.h */,
+				74A512FE1598077400193AD2 /* AppDelegate.m */,
+				74A513001598077400193AD2 /* MainStoryboard_iPhone.storyboard */,
+				74A513031598077400193AD2 /* MainStoryboard_iPad.storyboard */,
+				74A513091598077400193AD2 /* MasterViewController.h */,
+				74A5130A1598077400193AD2 /* MasterViewController.m */,
+				74A5130C1598077400193AD2 /* DetailViewController.h */,
+				74A5130D1598077400193AD2 /* DetailViewController.m */,
+				74A513061598077400193AD2 /* blackbunny_client_xcode.xcdatamodeld */,
+				74A512F51598077400193AD2 /* Supporting Files */,
+				74A5133115980D9A00193AD2 /* Packet.h */,
+				74A5133215980D9A00193AD2 /* Packet.m */,
+				74A5133415980DC100193AD2 /* NetController.h */,
+				74A5133515980DC100193AD2 /* NetController.m */,
+			);
+			path = "blackbunny-client-xcode";
+			sourceTree = "<group>";
+		};
+		74A512F51598077400193AD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74A512F61598077400193AD2 /* blackbunny-client-xcode-Info.plist */,
+				74A512F71598077400193AD2 /* InfoPlist.strings */,
+				74A512FA1598077400193AD2 /* main.m */,
+				74A512FC1598077400193AD2 /* blackbunny-client-xcode-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		74A5131C1598077400193AD2 /* blackbunny-client-xcodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				74A513221598077400193AD2 /* blackbunny_client_xcodeTests.h */,
+				74A513231598077400193AD2 /* blackbunny_client_xcodeTests.m */,
+				74A5131D1598077400193AD2 /* Supporting Files */,
+			);
+			path = "blackbunny-client-xcodeTests";
+			sourceTree = "<group>";
+		};
+		74A5131D1598077400193AD2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				74A5131E1598077400193AD2 /* blackbunny-client-xcodeTests-Info.plist */,
+				74A5131F1598077400193AD2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		74A512E71598077400193AD2 /* blackbunny-client-xcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A513271598077400193AD2 /* Build configuration list for PBXNativeTarget "blackbunny-client-xcode" */;
+			buildPhases = (
+				74A512E41598077400193AD2 /* Sources */,
+				74A512E51598077400193AD2 /* Frameworks */,
+				74A512E61598077400193AD2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "blackbunny-client-xcode";
+			productName = "blackbunny-client-xcode";
+			productReference = 74A512E81598077400193AD2 /* blackbunny-client-xcode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		74A513131598077400193AD2 /* blackbunny-client-xcodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 74A5132A1598077400193AD2 /* Build configuration list for PBXNativeTarget "blackbunny-client-xcodeTests" */;
+			buildPhases = (
+				74A5130F1598077400193AD2 /* Sources */,
+				74A513101598077400193AD2 /* Frameworks */,
+				74A513111598077400193AD2 /* Resources */,
+				74A513121598077400193AD2 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				74A5131B1598077400193AD2 /* PBXTargetDependency */,
+			);
+			name = "blackbunny-client-xcodeTests";
+			productName = "blackbunny-client-xcodeTests";
+			productReference = 74A513141598077400193AD2 /* blackbunny-client-xcodeTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		74A512DF1598077400193AD2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = none;
+			};
+			buildConfigurationList = 74A512E21598077400193AD2 /* Build configuration list for PBXProject "blackbunny-client-xcode" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 74A512DD1598077400193AD2;
+			productRefGroup = 74A512E91598077400193AD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				74A512E71598077400193AD2 /* blackbunny-client-xcode */,
+				74A513131598077400193AD2 /* blackbunny-client-xcodeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		74A512E61598077400193AD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A512F91598077400193AD2 /* InfoPlist.strings in Resources */,
+				74A513021598077400193AD2 /* MainStoryboard_iPhone.storyboard in Resources */,
+				74A513051598077400193AD2 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A513111598077400193AD2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A513211598077400193AD2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		74A513121598077400193AD2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		74A512E41598077400193AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A512FB1598077400193AD2 /* main.m in Sources */,
+				74A512FF1598077400193AD2 /* AppDelegate.m in Sources */,
+				74A513081598077400193AD2 /* blackbunny_client_xcode.xcdatamodeld in Sources */,
+				74A5130B1598077400193AD2 /* MasterViewController.m in Sources */,
+				74A5130E1598077400193AD2 /* DetailViewController.m in Sources */,
+				74A5133315980D9A00193AD2 /* Packet.m in Sources */,
+				74A5133615980DC100193AD2 /* NetController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		74A5130F1598077400193AD2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				74A513241598077400193AD2 /* blackbunny_client_xcodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		74A5131B1598077400193AD2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 74A512E71598077400193AD2 /* blackbunny-client-xcode */;
+			targetProxy = 74A5131A1598077400193AD2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		74A512F71598077400193AD2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74A512F81598077400193AD2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		74A513001598077400193AD2 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74A513011598077400193AD2 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		74A513031598077400193AD2 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74A513041598077400193AD2 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		74A5131F1598077400193AD2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				74A513201598077400193AD2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		74A513251598077400193AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		74A513261598077400193AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		74A513281598077400193AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackbunny-client-xcode/blackbunny-client-xcode-Prefix.pch";
+				INFOPLIST_FILE = "blackbunny-client-xcode/blackbunny-client-xcode-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		74A513291598077400193AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackbunny-client-xcode/blackbunny-client-xcode-Prefix.pch";
+				INFOPLIST_FILE = "blackbunny-client-xcode/blackbunny-client-xcode-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		74A5132B1598077400193AD2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/blackbunny-client-xcode.app/blackbunny-client-xcode";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackbunny-client-xcode/blackbunny-client-xcode-Prefix.pch";
+				INFOPLIST_FILE = "blackbunny-client-xcodeTests/blackbunny-client-xcodeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		74A5132C1598077400193AD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/blackbunny-client-xcode.app/blackbunny-client-xcode";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "blackbunny-client-xcode/blackbunny-client-xcode-Prefix.pch";
+				INFOPLIST_FILE = "blackbunny-client-xcodeTests/blackbunny-client-xcodeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		74A512E21598077400193AD2 /* Build configuration list for PBXProject "blackbunny-client-xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A513251598077400193AD2 /* Debug */,
+				74A513261598077400193AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		74A513271598077400193AD2 /* Build configuration list for PBXNativeTarget "blackbunny-client-xcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A513281598077400193AD2 /* Debug */,
+				74A513291598077400193AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		74A5132A1598077400193AD2 /* Build configuration list for PBXNativeTarget "blackbunny-client-xcodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				74A5132B1598077400193AD2 /* Debug */,
+				74A5132C1598077400193AD2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		74A513061598077400193AD2 /* blackbunny_client_xcode.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				74A513071598077400193AD2 /* blackbunny_client_xcode.xcdatamodel */,
+			);
+			currentVersion = 74A513071598077400193AD2 /* blackbunny_client_xcode.xcdatamodel */;
+			path = blackbunny_client_xcode.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 74A512DF1598077400193AD2 /* Project object */;
+}
