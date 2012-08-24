@@ -1,8 +1,10 @@
 package org.blackbunny.client;
 
+import org.blackbunny.core.NetByteOrder;
 import org.blackbunny.protocol.DefaultMessageDecoder;
 import org.blackbunny.protocol.DefaultMessageEncoder;
 import org.jboss.netty.bootstrap.ClientBootstrap;
+import org.jboss.netty.buffer.HeapChannelBufferFactory;
 import org.jboss.netty.channel.ChannelFuture;
 import org.jboss.netty.channel.ChannelPipeline;
 import org.jboss.netty.channel.ChannelPipelineFactory;
@@ -12,6 +14,7 @@ import org.jboss.netty.handler.codec.frame.LengthFieldBasedFrameDecoder;
 import org.jboss.netty.handler.codec.frame.LengthFieldPrepender;
 
 import java.net.InetSocketAddress;
+import java.nio.ByteOrder;
 import java.util.concurrent.Executors;
 
 /**
@@ -31,6 +34,8 @@ public class SampleClient
         this.host = host;
         this.port = port;
         this.id = id;
+
+        NetByteOrder.order( ByteOrder.LITTLE_ENDIAN );
     }
 
     public void run()
@@ -40,6 +45,8 @@ public class SampleClient
                 new NioClientSocketChannelFactory(
                         Executors.newCachedThreadPool(),
                         Executors.newCachedThreadPool()));
+
+
 
         // Set up the pipeline factory.
         bootstrap.setPipelineFactory(new ChannelPipelineFactory() {
@@ -52,6 +59,10 @@ public class SampleClient
                         new SampleClientHandler( id ));
             }
         });
+
+        System.out.println("Order by : " + NetByteOrder.order() );
+
+        bootstrap.setOption( "bufferFactory", new HeapChannelBufferFactory( NetByteOrder.order()) );
 
         // Start the connection attempt.
         ChannelFuture future = bootstrap.connect(new InetSocketAddress(host, port));

@@ -104,13 +104,13 @@ public class SimpleNetController implements NetController {
             }
         });
 
-
         bootstrap.setOption( "child.bufferFactory", new HeapChannelBufferFactory( NetByteOrder.order()) );
         bootstrap.setOption( "child.tcpNoDelay", true );
         bootstrap.setOption( "child.keepAlive", true );
 
         bootstrap.bind( inetSocketAddress );
 
+        logger.info("Order by : " + NetByteOrder.order() );
         logger.info("bind : {}", inetSocketAddress );
 
         return true;
